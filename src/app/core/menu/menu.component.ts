@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IMenuItem } from 'app/shared';
 
 @Component({
   selector: 'app-menu',
@@ -7,13 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  menuItems: IMenuItem[] = [];
+
   constructor() { }
 
   ngOnInit() {
-  }
-
-  onShow() {
-
+    this.menuItems.push(
+      {
+        icon: 'home',
+        text: 'Dashboard',
+        link: '/dashboard',
+        isActive: true
+      },
+      {
+        icon: 'magnify',
+        text: 'ICOs',
+        link: '/bitedechamo',
+        isActive: false
+      }
+    )
   }
 
 }

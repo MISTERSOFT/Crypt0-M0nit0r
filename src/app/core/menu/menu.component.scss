@@ -1,0 +1,22 @@
+.fixed-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 110px;
+  background: #263238;
+}
+.collection {
+  border-radius: 0;
+  margin: 0;
+  border: none;
+  .collection-item {
+    background: #263238;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    &.active-page {
+      background: #000a12;
+    }
+  }
+}
