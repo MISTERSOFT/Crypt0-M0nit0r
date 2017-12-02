@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from 'app/not-found/not-found.component';
 
 const routes: Routes = [
-    { path: '', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
+    { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
+    { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
     { path: '**', component: NotFoundComponent }
 ];
 

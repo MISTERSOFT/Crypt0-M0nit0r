@@ -1,4 +1,5 @@
-<div class="container fixed-menu">
+<!-- Left side menu -->
+<div class="fixed-menu-left">
   <ul class="collection">
     <li *ngFor="let item of menuItems" class="collection-item" [routerLink]="item.link" routerLinkActive="active-page">
       <div class="center">
@@ -7,4 +8,14 @@
       <div class="center">{{ item.text }}</div>
     </li>
   </ul>
+</div>
+<!-- Top menu header -->
+<div class="fixed-menu-top valign-wrapper">
+  <div class="content right-align">
+    <span class="hello-user">Hello, John Doe</span>
+    <button class="btn-flat white-text waves-effect">
+      Logout
+      <i mz-icon-mdi align="right" icon="logout-variant"></i>
+    </button>
+  </div>
 </div>

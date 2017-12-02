@@ -1,0 +1,8 @@
+// Menu
+@mixin common-style-menu($positionLeft) {
+  position: fixed;
+  top: 0;
+  left: $positionLeft;
+  background: $menu-bg-color;
+  color: $menu-text-color;
+}

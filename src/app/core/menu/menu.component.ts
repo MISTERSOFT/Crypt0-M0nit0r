@@ -14,18 +14,8 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.menuItems.push(
-      {
-        icon: 'home',
-        text: 'Dashboard',
-        link: '/dashboard',
-        isActive: true
-      },
-      {
-        icon: 'magnify',
-        text: 'ICOs',
-        link: '/bitedechamo',
-        isActive: false
-      }
+      { icon: 'view-dashboard', text: 'Dashboard', link: '/dashboard' },
+      { icon: 'magnify', text: 'ICOs', link: '/bite' }
     )
   }
 

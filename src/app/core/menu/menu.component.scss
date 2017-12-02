@@ -1,22 +1,36 @@
-.fixed-menu {
-  position: fixed;
-  left: 0;
-  top: 0;
+@import 'src/assets/styles/_variables';
+@import 'src/assets/styles/_mixins';
+
+.fixed-menu-left {
+  @include common-style-menu(0px);
   bottom: 0;
   width: 110px;
-  background: #263238;
-}
-.collection {
-  border-radius: 0;
-  margin: 0;
-  border: none;
-  .collection-item {
-    background: #263238;
-    color: #fff;
+  .collection {
+    border-radius: 0;
+    margin: 0;
     border: none;
-    cursor: pointer;
-    &.active-page {
-      background: #000a12;
+    .collection-item {
+      background: $menu-bg-color;
+      border: none;
+      cursor: pointer;
+      &.active-page {
+        border-left: 3px #0091ff inset;
+      }
+    }
+  }
+}
+
+.fixed-menu-top {
+  @include common-style-menu(110px);
+  right: 0;
+  height: 50px;
+  .content {
+    width: 100%;
+    .hello-user {
+      font-weight: 300;
+    }
+    .btn-flat {
+      font-weight: 500;
     }
   }
 }
