@@ -13,6 +13,9 @@
       background: $menu-bg-color;
       border: none;
       cursor: pointer;
+      &:focus {
+        outline: none;
+      }
       &.active-page {
         border-left: 3px #0091ff inset;
       }
@@ -32,5 +35,11 @@
     .btn-flat {
       font-weight: 500;
     }
+  }
+  .menu-loader {
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    right: 0;
   }
 }

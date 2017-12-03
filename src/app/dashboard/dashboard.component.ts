@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoaderService } from 'app/core/loader.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  isLoading = false;
+
+  constructor(private _loader: LoaderService) { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    this.isLoading = !this.isLoading;
+    this._loader.isQuerying.next(this.isLoading);
   }
 
 }
