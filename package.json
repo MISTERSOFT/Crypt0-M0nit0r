@@ -52,6 +52,7 @@
     "mdi": "^2.0.46",
     "ng2-materialize": "^1.7.2",
     "rxjs": "5.5.2",
+    "socket.io-client": "^2.0.4",
     "zone.js": "0.8.17"
   },
   "devDependencies": {
