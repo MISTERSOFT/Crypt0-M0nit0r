@@ -2,6 +2,7 @@
 @mixin common-style-menu($positionLeft) {
   position: fixed;
   top: 0;
+  z-index: 9999;
   left: $positionLeft;
   background: $menu-bg-color;
   color: $menu-text-color;

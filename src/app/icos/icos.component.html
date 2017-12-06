@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col s12">
+    <mz-tab [fixedTabWidth]="true" [onShow]="onTabSelected" [responsiveThreshold]="true" [swipeable]="true">
+      <mz-tab-item [active]="true" label="Finished">
+        <mz-input-container>
+          <!-- <i mz-icon-mdi mz-input-prefix icon="magnify"></i> -->
+          <input mz-input placeholder="Search" type="text" (keyup)="onSearch.next($event.target.value)">
+        </mz-input-container>
+        <mz-collection>
+          <mz-collection-item *ngFor="let ico of finishedICOs" [avatar]="true">
+            <img mz-avatar [src]="ico.image">
+            <div class="title">{{ ico.name }} ({{ ico.coin_symbol }})</div>
+            <div>{{ ico.description }}</div>
+            <div>Current value: ${{ ico.price_usd }}</div>
+            <span mz-secondary-content>
+              <span [ngClass]="{ 'green-text': ico.isROIWorth(), 'red-text': !ico.isROIWorth() }">{{ ico.all_time_roi }}</span>
+            </span>
+          </mz-collection-item>
+        </mz-collection>
+      </mz-tab-item>
+      <mz-tab-item label="Live">
+        <mz-collection>
+          <mz-collection-item *ngFor="let ico of finishedICOs" [avatar]="true">
+            <img mz-avatar [src]="ico.image">
+            <div class="title">{{ ico.name }} ({{ ico.coin_symbol }})</div>
+            <div>{{ ico.description }}</div>
+            <div>Current value: ${{ ico.price_usd }}</div>
+            <span mz-secondary-content>
+              Ends in:
+              <app-date-countdown [endDate]="ico.end_time"></app-date-countdown>
+            </span>
+          </mz-collection-item>
+        </mz-collection>
+      </mz-tab-item>
+      <mz-tab-item label="Upcoming">
+        <mz-collection>
+          <mz-collection-item *ngFor="let ico of finishedICOs" [avatar]="true">
+            <img mz-avatar [src]="ico.image">
+            <div class="title">{{ ico.name }} ({{ ico.coin_symbol }})</div>
+            <div>{{ ico.description }}</div>
+            <div>Current value: ${{ ico.price_usd }}</div>
+            <span mz-secondary-content>
+              Ends in:
+              <app-date-countdown [endDate]="ico.end_time"></app-date-countdown>
+            </span>
+          </mz-collection-item>
+        </mz-collection>
+      </mz-tab-item>
+    </mz-tab>
+  </div>
+</div>

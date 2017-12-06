@@ -5,6 +5,7 @@ import { NotFoundComponent } from 'app/not-found/not-found.component';
 const routes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
     { path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
+    { path: 'icos', loadChildren: 'app/icos/icos.module#ICOsModule' },
     { path: '**', component: NotFoundComponent }
 ];
 
